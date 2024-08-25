@@ -99,4 +99,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | **/users/[username]**      | 특정 사용자의 프로필 페이지                  | getProfile                                                |
 | **/users/[username]/edit** | 사용자 프로필 수정페이지                     | editProfile                                               |
 
-### 업데이트 해야합니다
+### 위의 내역은 업데이트 해야합니다
