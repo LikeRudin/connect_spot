@@ -2,7 +2,7 @@ import dbClient from "@/lib/db";
 import { SpotUploadForm } from "@/components";
 import SpotList from "@/components/features/SpotList";
 
-export const getInitialSpots = async () =>
+const getInitialSpots = async () =>
   dbClient.spot.findMany({
     select: {
       id: true,
