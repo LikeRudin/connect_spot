@@ -7,7 +7,10 @@ export async function middleware(request: NextRequest) {
   const session = await getSession();
 
   if (!session.id) {
-    if (request.nextUrl.pathname === "/") {
+    if (
+      request.nextUrl.pathname === "/home" ||
+      request.nextUrl.pathname === "/"
+    ) {
       return NextResponse.redirect(new URL("/login", request.url));
     }
   }
