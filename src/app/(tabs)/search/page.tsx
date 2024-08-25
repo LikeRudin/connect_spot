@@ -11,8 +11,6 @@ import { Spot } from "@/components";
 
 const Page = () => {
   const [state, trigger] = useFormState(searchSpots, null);
-  console.log("클라이언트 스테이트");
-  console.log(state);
 
   return (
     <div>
@@ -24,16 +22,28 @@ const Page = () => {
           type="submit"
         />
       </form>
-      {state?.map(({ id, text, createdAt, title, user: { username } }) => (
-        <Spot
-          title={title}
-          key={id}
-          id={id}
-          text={text}
-          createdAt={createdAt.toDateString()}
-          username={username}
-        />
-      ))}
+      {state?.map(
+        ({
+          id,
+          text,
+          createdAt,
+          title,
+          user: { username },
+          connectCount,
+          isConnected,
+        }) => (
+          <Spot
+            connectCount={connectCount}
+            isConnected={isConnected}
+            title={title}
+            key={id}
+            id={id}
+            text={text}
+            createdAt={createdAt.toDateString()}
+            username={username}
+          />
+        )
+      )}
     </div>
   );
 };
