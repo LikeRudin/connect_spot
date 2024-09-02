@@ -1,12 +1,7 @@
 node_modules
 .vercel/
 .next/
-.next/
-.vercel
-server
-static
-cache
-types
+
 # Keep environment variables out of version control
 .env
 .env.development.local
